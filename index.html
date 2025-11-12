@@ -1,7 +1,456 @@
-<html>
-<head></head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faber3D - Furniture Design Platform</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/fav.ico">
+</head>
+
 <body>
-<h2>Web Page of Maria Serrano</h2>
--WIP-
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">
+                    <div class="logo-container">
+                        <div class="f-icon">
+                            <div class="line line-1"></div>
+                            <div class="line line-2"></div>
+                            <div class="line line-3"></div>
+                        </div>
+                        <span class="logo-text">ABER 3D</span>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-menu">
+                <!-- <a href="#home" class="nav-link">Product</a> -->
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#explore" class="nav-link">Explore</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-buttons">
+                <a href="#" class="nav-button login-btn">Log In</a>
+                <a href="#" class="nav-button signup-btn">Sign Up</a>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section home-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Custom furniture powered by a<br><span class="italic-text">3D Experience</span></h1>
+                    <p>FABER powers a suite of design API's for the next-generation of furniture companies to build
+                        hundreds of <span class="highlight-text">custom design flows</span>.</p>
+                    <div class="cta-buttons">
+                        <button class="cta-button primary">START A DESIGN </button>
+                        <button class="cta-button secondary">CONTACT SALES</button>
+                    </div>
+                    <div class="hero-video">
+                        <video autoplay muted loop>
+                            <source src="assets/hero.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="semi-features" class="section semi-features-section">
+            <div class="container">
+                <div class="embossed-text">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <div class="features-title typewriter" id="typewriter-text">Where Craftsmanship meets Technology</div>
+
+                <!-- Scroll Indicator -->
+                <div class="scroll-indicator">
+                    <span></span>
+                    <p>Discover the features</p>
+                </div>
+        </section>
+        <!-- Features Section -->
+        <section id="features" class="section features-section">
+            <!-- 3D Furniture Design Sub-section -->
+            <div class="feature-subsection" id="3d-design">
+                <div class="feature-badge">
+                    <div class="badge-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                            <polyline points="3.27,6.96 12,12.01 20.73,6.96" />
+                            <line x1="12" y1="22.08" x2="12" y2="12" />
+                        </svg>
+                    </div>
+                    <span class="badge-text">3D Furniture Design</span>
+                </div>
+                <div class="container">
+                    <!-- Content for 3D Design -->
+                    <div class="feature-subsection-title">
+                        Design in 3D
+                    </div>
+                    <div class="feature-subsection-description">
+                        Bring your furniture ideas to life with our intuitive 3D design tools. Customize every detail,
+                        visualize in real-time, and create stunning pieces that reflect your unique style.
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Show on Web Sub-section -->
+            <div class="feature-subsection" id="show-web">
+                <div class="feature-badge">
+                    <div class="badge-icon">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.62721 1.32912C3.25126 1.90223 1.44239 3.9297 1.19547 6.41667H3.33409C3.51285 4.57053 4.50704 2.79574 5.62721 1.32912ZM7 0C3.13401 0 0 3.13401 0 7C0 10.866 3.13401 14 7 14C10.866 14 14 10.866 14 7C14 3.13401 10.866 0 7 0ZM8.37279 1.32912C9.49296 2.79574 10.4872 4.57053 10.6659 6.41667H12.8045C12.5576 3.9297 10.7487 1.90223 8.37279 1.32912ZM9.49256 6.41667C9.28857 4.69829 8.22495 2.95467 7 1.47825C5.77505 2.95467 4.71143 4.69829 4.50744 6.41667H9.49256ZM4.50744 7.58333H9.49256C9.28857 9.30171 8.22495 11.0453 7 12.5217C5.77505 11.0453 4.71143 9.30171 4.50744 7.58333ZM3.33409 7.58333H1.19547C1.44239 10.0703 3.25126 12.0978 5.62721 12.6709C4.50704 11.2043 3.51285 9.42947 3.33409 7.58333ZM8.37279 12.6709C9.49296 11.2043 10.4872 9.42947 10.6659 7.58333H12.8045C12.5576 10.0703 10.7487 12.0978 8.37279 12.6709Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <span class="badge-text">Show on Web</span>
+                </div>
+                <div class="container">
+                    <!-- Content for Show on Web -->
+                </div>
+            </div>
+
+            <!-- Client Configure Sub-section -->
+            <div class="feature-subsection" id="client-configure">
+                <div class="feature-badge">
+                    <div class="badge-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                            <circle cx="12" cy="7" r="4" />
+                        </svg>
+                    </div>
+                    <span class="badge-text">Client Configure</span>
+                </div>
+                <div class="container">
+                    <!-- Content for Client Configure -->
+                </div>
+            </div>
+
+            <!-- Manage Sub-section -->
+            <div class="feature-subsection" id="manage">
+                <div class="feature-badge">
+                    <div class="badge-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2 2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg>
+                    </div>
+                    <span class="badge-text">Manage</span>
+                </div>
+                <div class="container">
+                    <!-- Content for Manage -->
+                </div>
+            </div>
+        </section>
+
+        <!-- How To Section -->
+        <section id="howto" class="section howto-section">
+            <div class="container">
+                <div class="demo-title">
+                    Experience the Magic
+                </div>
+                <div class="demo-subtitle">
+                    Explore some ready-made examples below to see how Faber 3D can transform your furniture design
+                    process.
+                </div>
+                <div class="frame-browser mockup-container">
+                    <div class="browser-header">
+                        <div class="browser-dots">
+                            <div class="browser-dot dot-red"></div>
+                            <div class="browser-dot dot-yellow"></div>
+                            <div class="browser-dot dot-green"></div>
+                        </div>
+                        <div class="browser-url">✨ www.faber3d.com ✨</div>
+                    </div>
+                    <div class="browser-content">
+                        <div class="iframe-overlay" id="iframeOverlay">
+                            <div class="overlay-message">
+                                <div class="overlay-icon">🖱️</div>
+                                <div class="overlay-text">Click to drag</div>
+                            </div>
+                        </div>
+                        <iframe id="iframeExample1"
+                            src="https://faber3d.com/Configurator/collection.html?collection=bzLyzoHdq1&amp;object=V2gov2JyyB&amp;conf=7&amp;rol=1&amp;embed"
+                            style="width:100%; background: transparent; border: none;" height="800px"
+                            alt="A wooden board">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="explore" class="section explore-section">
+            <div class="container">
+                <div class="explore-title">
+                    Explore More Designs
+                </div>
+                <div class="explore-subtitle">
+                    Dive into our gallery of custom furniture designs created using Faber 3D. Get inspired and see the
+                    possibilities.
+                </div>
+            </div>
+            <div class="showcase-container">
+                <!-- Primera fila - scroll a la izquierda -->
+                <div class="scroll-row scroll-left">
+                    <div class="scroll-content" id="row1"></div>
+                </div>
+
+                <!-- Segunda fila - scroll a la derecha -->
+                <div class="scroll-row scroll-right">
+                    <div class="scroll-content" id="row2"></div>
+                </div>
+            </div>
+
+            <a href="#" class="explore-button">Get Started</a>
+
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="section pricing-section">
+            <div class="container">
+                <h2>Pricing Plans</h2>
+                <p>Choose the perfect plan for your needs.</p>
+
+                <div class="pricing-grid">
+                    <!-- No Registration -->
+                    <div class="pricing-card starter">
+                        <div class="plan-header">
+                            <div class="plan-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3>No registration</h3>
+                        </div>
+
+                        <div class="price">
+                            <span class="currency">€</span><span class="amount">0</span>
+                        </div>
+                        <div class="billing-info">No registration required</div>
+
+                        <button class="pricing-button starter-btn">Create Collection</button>
+
+                        <div class="features-section">
+                            <ul class="features-list">
+                                <li>✓ Create and edit collections</li>
+                                <li>✓ Export and Import</li>
+                                <li>✓ Save to file</li>
+                                <li>✓ Local use</li>
+                                <li>✓ 1 Collection</li>
+                                <li>✓ 1 piece of furniture</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Free -->
+                    <div class="pricing-card">
+                        <div class="plan-header">
+                            <div class="plan-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3>Free</h3>
+                        </div>
+
+                        <div class="price">
+                            <span class="currency">€</span><span class="amount">0</span>
+                        </div>
+                        <div class="billing-info">No credit card required</div>
+
+                        <button class="pricing-button">Register</button>
+
+                        <div class="features-section">
+                            <ul class="features-list">
+                                <li>✓ Create and edit collections</li>
+                                <li>✓ Export and Import</li>
+                                <li>✓ Save to account</li>
+                                <li>✓ Publish 1 piece of furniture (with logo)</li>
+                                <li>✓ 1 Collection</li>
+                                <li>✓ 1 piece of furniture</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Pro -->
+                    <div class="pricing-card professional featured">
+                        <div class="plan-header">
+                            <div class="plan-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3>Pro</h3>
+                            <span class="popular-badge">Popular</span>
+                        </div>
+
+                        <div class="price">
+                            <span class="currency">€</span><span class="amount">49</span>
+                        </div>
+                        <div class="billing-info">per month</div>
+
+                        <button class="pricing-button professional-btn">Register</button>
+
+                        <div class="features-section">
+                            <ul class="features-list">
+                                <li>✓ Create and edit collections</li>
+                                <li>✓ Export and Import</li>
+                                <li>✓ Save to account</li>
+                                <li>✓ Unlimited publishing</li>
+                                <li>✓ 5 Collections</li>
+                                <li>✓ 25 pieces of furniture</li>
+                                <li>✓ No ads</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Business -->
+                    <div class="pricing-card enterprise">
+                        <div class="plan-header">
+                            <div class="plan-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3>Business</h3>
+                        </div>
+
+                        <div class="price">
+                            <span class="currency">€</span><span class="amount">249</span>
+                        </div>
+                        <div class="billing-info">per month</div>
+
+                        <button class="pricing-button enterprise-btn">Register</button>
+
+                        <div class="features-section">
+                            <ul class="features-list">
+                                <li>✓ Create and edit collections</li>
+                                <li>✓ Export and Import</li>
+                                <li>✓ Save to account</li>
+                                <li>✓ Unlimited publishing</li>
+                                <li>✓ 50 Collections</li>
+                                <li>✓ 250 pieces of furniture</li>
+                                <li>✓ Up to 8 establishments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <p>Get in touch with us for your next project.</p>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+
+                </div>
+                <div class="footer-right">
+                    <div class="footer-columns">
+                        <div class="footer-column">
+                            <h4>GET IN TOUCH</h4>
+                            <ul>
+                                <li><a href="#">Media</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>COMPANY</h4>
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Uses</a></li>
+                                <li><a href="#">Stewardship</a></li>
+                                <li><a href="#">Technology</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-section">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Faber 3D, Rhode Avenue 255</p>
+                </div>
+            </div>
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="f-icon-large">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                    </div>
+                </div>
+                <h1>FABER 3D</h1>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dialog Overlay -->
+    <div id="configuratorDialog" class="dialog-overlay">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <h3 id="dialogTitle">Furniture Configurator</h3>
+                <button class="dialog-close">&times;</button>
+            </div>
+            <div class="dialog-body">
+                <iframe id="dialogIframe" src="" style="width:100%; background: transparent; border: none;"
+                    height="600px" alt="Furniture configurator">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
