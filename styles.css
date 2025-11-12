@@ -31,6 +31,7 @@ body {
     padding: 1rem 0;
     transition: all 0.3s ease;
     transform: translateY(0);
+    width: 100vw;
 }
 
 .navbar.nav-hidden {
@@ -632,8 +633,8 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
     .card {
-        width: 280px;
-        height: 180px;
+        width: 200px;
+        height: 100px;
     }
 
     .showcase-container {
@@ -755,6 +756,7 @@ body {
     text-transform: uppercase;
     font-size: 18px;
     font-weight: 300;
+    text-align: center;
 }
 
 @keyframes slideInF {
