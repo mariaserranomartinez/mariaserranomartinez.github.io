@@ -24,7 +24,7 @@
                             <div class="line line-2"></div>
                             <div class="line line-3"></div>
                         </div>
-                        <span class="logo-text">ABER 3D</span>
+                        <span class="logo-text">ABER <span class="logo-3d">3D</span></span>
                     </div>
                 </a>
             </div>
@@ -90,17 +90,6 @@
         <section id="features" class="section features-section">
             <!-- 3D Furniture Design Sub-section -->
             <div class="feature-subsection" id="3d-design">
-                <div class="feature-badge">
-                    <div class="badge-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                            <polyline points="3.27,6.96 12,12.01 20.73,6.96" />
-                            <line x1="12" y1="22.08" x2="12" y2="12" />
-                        </svg>
-                    </div>
-                    <span class="badge-text">3D Furniture Design</span>
-                </div>
                 <div class="container">
                     <!-- Content for 3D Design -->
                     <div class="feature-subsection-title">
@@ -110,58 +99,357 @@
                         Bring your furniture ideas to life with our intuitive 3D design tools. Customize every detail,
                         visualize in real-time, and create stunning pieces that reflect your unique style.
                     </div>
+                    <!-- <div class="design-card">
+                        <div class="animated-design">
+                            Setup your design
+                        </div>
+                        <video autoplay muted loop class="design-video">
+                            <source src="assets/design3d.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div> -->
 
+                    <div class="design-video-container">
+
+                        <video autoplay muted loop class="design-video">
+                            <source src="https://cdn.spline.design/_assets/_videos/spline_3d_editor.mp4"
+                                type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <!-- Feature Cards Grid -->
+                    <div class="designer-cards-grid">
+                        <div class="designer-card">
+                            <div class="designer-card-image">
+                                <div class="morphing-cube-container" id="morphingCube1"></div>
+                            </div>
+                            <div class="designer-card-content">
+                                <div class="designer-card-category">Visualize and edit in real time</div>
+                                <h3 class="designer-card-title">Create and explore your furniture models directly in 3D.
+                                    Every change in size, proportion, or material updates instantly — no rendering
+                                    delays, no extra tools.</h3>
+                            </div>
+                        </div>
+
+                        <div class="designer-card">
+                            <div class="designer-card-image parametric-card">
+                                <!-- <div class="parametric-3d-container" id="parametricFurniture"></div> -->
+                                
+                                <!-- Parameter Overlay -->
+                                <div class="parameter-overlay">
+                                    <div class="parameter-controls">
+                                        <!-- Width Slider -->
+                                        <div class="parameter-group">
+                                            <div class="parameter-header">
+                                                <span class="parameter-label">Width</span>
+                                                <div class="parameter-value-display">
+                                                    <span class="parameter-value" id="paramWidth">1200</span>
+                                                    <span class="parameter-unit">mm</span>
+                                                </div>
+                                            </div>
+                                            <div class="parameter-slider-wrapper">
+                                                <input type="range" 
+                                                       id="widthSlider" 
+                                                       class="parameter-slider" 
+                                                       min="800" 
+                                                       max="2000" 
+                                                       value="1200">
+                                                <div class="slider-labels">
+                                                    <span>800</span>
+                                                    <span>Default: 1200</span>
+                                                    <span>2000</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Height Slider -->
+                                        <div class="parameter-group">
+                                            <div class="parameter-header">
+                                                <span class="parameter-label">Height</span>
+                                                <div class="parameter-value-display">
+                                                    <span class="parameter-value" id="paramHeight">1800</span>
+                                                    <span class="parameter-unit">mm</span>
+                                                </div>
+                                            </div>
+                                            <div class="parameter-slider-wrapper">
+                                                <input type="range" 
+                                                       id="heightSlider" 
+                                                       class="parameter-slider" 
+                                                       min="1200" 
+                                                       max="2400" 
+                                                       value="1800">
+                                                <div class="slider-labels">
+                                                    <span>1200</span>
+                                                    <span>Default: 1800</span>
+                                                    <span>2400</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Depth Slider -->
+                                        <div class="parameter-group">
+                                            <div class="parameter-header">
+                                                <span class="parameter-label">Depth</span>
+                                                <div class="parameter-value-display">
+                                                    <span class="parameter-value" id="paramDepth">400</span>
+                                                    <span class="parameter-unit">mm</span>
+                                                </div>
+                                            </div>
+                                            <div class="parameter-slider-wrapper">
+                                                <input type="range" 
+                                                       id="depthSlider" 
+                                                       class="parameter-slider" 
+                                                       min="300" 
+                                                       max="600" 
+                                                       value="400">
+                                                <div class="slider-labels">
+                                                    <span>300</span>
+                                                    <span>Default: 400</span>
+                                                    <span>600</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="designer-card-content">
+                                <div class="designer-card-category">Turn dimensions into parameters
+                                </div>
+                                <h3 class="designer-card-title">Define custom variables like width, height, thickness,
+                                    or spacing — with minimums, maximums, and default values. Your customers interact
+                                    safely within your design limits.</h3>
+                            </div>
+                        </div>
+
+                        <div class="designer-card">
+                            <div class="designer-card-image formula-card">
+                                <div class="formula-diagram-container" id="formulaDiagram">
+                                    <canvas id="formulaCanvas"></canvas>
+                                </div>
+                            </div>
+                            <div class="designer-card-content">
+                                <div class="designer-card-category">Automate relationships with formulas
+                                </div>
+                                <h3 class="designer-card-title">Connect parameters together with simple formulas. For
+                                    example: "shelf spacing = height / 5". Create intelligent designs that scale and
+                                    adjust automatically.</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Materials Sub-section -->
+            <div class="feature-subsection" id="materials">
+                <div class="container ">
+                    <div class="feature-subsection-title">
+                        Materials Come To Life
+                    </div>
+                    <div class="feature-subsection-description">
+                        The materials that you define, ready to impress in 3D. Let your customers see and feel the
+                        quality of your designs with realistic textures and finishes.
+                    </div>
+                    <!-- Materials Carousel -->
+                    <div class="carousel-container">
+                        <!-- Circles -->
+                        <div class="circles-wrapper">
+                            <div class="circle circle-1 active pos-0" data-index="0">
+                                <img src="assets/materials/Wood001_1K_Color.jpg" alt="Wood Texture" />
+                            </div>
+                            <div class="circle circle-2 pos-1" data-index="1">
+                                <img src="assets/materials/Metal046B_1K_Color.jpg" alt="Metal Finish" />
+                            </div>
+                            <div class="circle circle-3 pos-2" data-index="2">
+                                <img src="assets/materials/Wood002_1K_Color.jpg" alt="Fabric Texture" />
+                            </div>
+                            <div class="circle circle-4 pos--1" data-index="3">
+                                <img src="assets/materials/Wood033_1K_Color.jpg" alt="Leather Grain" />
+                            </div>
+                            <div class="circle circle-5 pos--2" data-index="4">
+                                <img src="assets/materials/Wood050_1K_Color.jpg" alt="Marble Surface" />
+                            </div>
+                            <div class="circle circle-6 pos-right-hidden" data-index="5">
+                                <img src="assets/materials/Wood067_1K_Color.jpg" alt="Glass Finish" />
+                            </div>
+                        </div>
+
+                        <!-- Title -->
+                        <div class="title-container">
+                            <div class="title-connector-line"></div>
+                            <div class="title" id="carousel-title">Wood Textures</div>
+                        </div>
+
+                        <!-- Content Area -->
+                        <div class="content-container">
+                            <div class="progress-bar" id="progress-bar"></div>
+
+                            <div class="content-slide active" data-index="0">
+                                <div class="material-3d-container" id="material-cube-0"></div>
+                            </div>
+                            <div class="content-slide" data-index="1">
+                                <div class="material-3d-container" id="material-cube-1"></div>
+                            </div>
+                            <div class="content-slide" data-index="2">
+                                <div class="material-3d-container" id="material-cube-2"></div>
+                            </div>
+                            <div class="content-slide" data-index="3">
+                                <div class="material-3d-container" id="material-cube-3"></div>
+                            </div>
+                            <div class="content-slide" data-index="4">
+                                <div class="material-3d-container" id="material-cube-4"></div>
+                            </div>
+                            <div class="content-slide" data-index="5">
+                                <div class="material-3d-container" id="material-cube-5"></div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
 
-            <!-- Show on Web Sub-section -->
-            <div class="feature-subsection" id="show-web">
-                <div class="feature-badge">
-                    <div class="badge-icon">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.62721 1.32912C3.25126 1.90223 1.44239 3.9297 1.19547 6.41667H3.33409C3.51285 4.57053 4.50704 2.79574 5.62721 1.32912ZM7 0C3.13401 0 0 3.13401 0 7C0 10.866 3.13401 14 7 14C10.866 14 14 10.866 14 7C14 3.13401 10.866 0 7 0ZM8.37279 1.32912C9.49296 2.79574 10.4872 4.57053 10.6659 6.41667H12.8045C12.5576 3.9297 10.7487 1.90223 8.37279 1.32912ZM9.49256 6.41667C9.28857 4.69829 8.22495 2.95467 7 1.47825C5.77505 2.95467 4.71143 4.69829 4.50744 6.41667H9.49256ZM4.50744 7.58333H9.49256C9.28857 9.30171 8.22495 11.0453 7 12.5217C5.77505 11.0453 4.71143 9.30171 4.50744 7.58333ZM3.33409 7.58333H1.19547C1.44239 10.0703 3.25126 12.0978 5.62721 12.6709C4.50704 11.2043 3.51285 9.42947 3.33409 7.58333ZM8.37279 12.6709C9.49296 11.2043 10.4872 9.42947 10.6659 7.58333H12.8045C12.5576 10.0703 10.7487 12.0978 8.37279 12.6709Z" fill="currentColor"/>
-                        </svg>
+            <!-- Configurator Sub-section -->
+            <div class="feature-subsection" id="configurator">
+                <div class="container row">
+                    <div class="column">
+
+                        <div class="feature-subsection-title">
+                            Interactive Configuration
+                        </div>
+                        <div class="feature-subsection-description">
+                            Experience our powerful configurator in action. Watch how dimensions, materials, and pricing update in real-time as you customize your furniture.
+                        </div>
                     </div>
-                    <span class="badge-text">Show on Web</span>
-                </div>
-                <div class="container">
-                    <!-- Content for Show on Web -->
+                    
+                    <div class="configurator-demo-container">
+                        <div class="configurator">
+                            <!-- <div class="header">
+                                <h1>Custom Cupboard</h1>
+                                <div class="subtitle">Configure your perfect storage solution</div>
+                            </div> -->
+
+                            <div class="slider-group">
+                                <div class="slider-header">
+                                    <div class="slider-label">WIDTH</div>
+                                    <div class="slider-value" id="widthValue">80 cm</div>
+                                </div>
+                                <div class="slider-container">
+                                    <div class="slider-track" id="widthTrack"></div>
+                                    <div class="slider-thumb" id="widthThumb"></div>
+                                </div>
+                            </div>
+
+                            <div class="slider-group">
+                                <div class="slider-header">
+                                    <div class="slider-label">HEIGHT</div>
+                                    <div class="slider-value" id="heightValue">150 cm</div>
+                                </div>
+                                <div class="slider-container">
+                                    <div class="slider-track" id="heightTrack"></div>
+                                    <div class="slider-thumb" id="heightThumb"></div>
+                                </div>
+                            </div>
+
+                            <div class="slider-group">
+                                <div class="slider-header">
+                                    <div class="slider-label">CUPBOARDS</div>
+                                    <div class="slider-value" id="unitsValue">1 unit</div>
+                                </div>
+                                <div class="slider-container">
+                                    <div class="slider-track" id="unitsTrack"></div>
+                                    <div class="slider-thumb" id="unitsThumb"></div>
+                                </div>
+                            </div>
+
+                            <div class="material-section">
+                                <div class="material-label">
+                                    <span>MATERIAL</span>
+                                    <span id="materialValue">Oak</span>
+                                </div>
+                                <div class="materials">
+                                    <div class="material-option active" data-material="oak" data-multiplier="1.2">
+                                        <div class="material-swatch oak"></div>
+                                        <div class="material-name">Oak</div>
+                                        <!-- <div class="material-price">+20%</div> -->
+                                    </div>
+                                    <div class="material-option" data-material="walnut" data-multiplier="1.5">
+                                        <div class="material-swatch walnut"></div>
+                                        <div class="material-name">Walnut</div>
+                                        <!-- <div class="material-price">+50%</div> -->
+                                    </div>
+                                    <div class="material-option" data-material="pine" data-multiplier="1.0">
+                                        <div class="material-swatch pine"></div>
+                                        <div class="material-name">Pine</div>
+                                        <!-- <div class="material-price">Base</div> -->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="price-breakdown">
+                                <div class="price-row">
+                                    <span>Base Price</span>
+                                    <span id="basePrice">€240</span>
+                                </div>
+                                <div class="price-row">
+                                    <span>Material Multiplier</span>
+                                    <span id="materialMultiplier">x1.2</span>
+                                </div>
+                                <div class="price-row">
+                                    <span>Size Factor</span>
+                                    <span id="sizeFactor">x1.00</span>
+                                </div>
+                            </div> -->
+
+                            <div class="total-price">
+                                <div class="total-label">TOTAL PRICE</div>
+                                <div class="total-amount" id="totalPrice">€ 288</div>
+                            </div>
+
+                            <!-- <button class="add-to-cart">ADD TO CART</button> -->
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Client Configure Sub-section -->
             <div class="feature-subsection" id="client-configure">
-                <div class="feature-badge">
-                    <div class="badge-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                            <circle cx="12" cy="7" r="4" />
-                        </svg>
-                    </div>
-                    <span class="badge-text">Client Configure</span>
-                </div>
+
                 <div class="container">
                     <!-- Content for Client Configure -->
+                    <div class="feature-subsection-title">
+                        Show To Your Clientes
+                    </div>
+                    <div class="feature-subsection-description">
+                        Either show it in your shop or add it to your web. Faber3D adapts to any way of working.
+                    </div>
+
+                    <!-- Wireframe to Webpage Animation -->
+                    <div class="wireframe-animation-container">
+                        <canvas id="wireframeCanvas"></canvas>
+                        <img id="finalWebImage" src="assets/fake_web.png" alt="Final Website">
+                        
+                        <!-- Progress indicator -->
+                        <!-- <div class="wireframe-progress">
+                            <div class="progress-bar-container">
+                                <div class="progress-bar" id="wireframeProgress"></div>
+                            </div>
+                            <span class="progress-text" id="wireframeProgressText">Drawing...</span>
+                        </div> -->
+                    </div>
+                    
+                    <!-- Platform Integration Logos -->
+                     <div class="platform-integration-text">Include it in your e-commerce website</div>
+                    <div class="platform-logos">
+                        <img src="assets/squarespace-logo.svg" alt="Squarespace" class="platform-logo">
+                        <img src="assets/wordpress.png" alt="WordPress" class="platform-logo">
+                        <img src="assets/shopify.png" alt="Shopify" class="platform-logo">
+                    </div>
+
                 </div>
+
             </div>
 
-            <!-- Manage Sub-section -->
-            <div class="feature-subsection" id="manage">
-                <div class="feature-badge">
-                    <div class="badge-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="3" />
-                            <path
-                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2 2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                        </svg>
-                    </div>
-                    <span class="badge-text">Manage</span>
-                </div>
-                <div class="container">
-                    <!-- Content for Manage -->
-                </div>
-            </div>
         </section>
 
         <!-- How To Section -->
@@ -186,7 +474,7 @@
                     <div class="browser-content">
                         <div class="iframe-overlay" id="iframeOverlay">
                             <div class="overlay-message">
-                                <div class="overlay-icon">🖱️</div>
+                                <!-- <div class="overlay-icon">🖱️</div> -->
                                 <div class="overlay-text">Click to drag</div>
                             </div>
                         </div>
@@ -222,6 +510,12 @@
                 </div>
             </div>
 
+            <div class="explore-cta-title">
+                Ready to create your own custom furniture?
+            </div>
+            <!-- <div class="explore-cta-subtitle">
+            Start designing your dream furniture with our intuitive 3D configurator. No experience needed.
+            </div> -->
             <a href="#" class="explore-button">Get Started</a>
 
         </section>
@@ -237,10 +531,11 @@
                     <div class="pricing-card starter">
                         <div class="plan-header">
                             <div class="plan-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
+                                <div class="f-icon">
+                                    <div class="line line-1"></div>
+                                    <div class="line line-2"></div>
+                                    <div class="line line-3"></div>
+                                </div>
                             </div>
                             <h3>No registration</h3>
                         </div>
@@ -268,10 +563,11 @@
                     <div class="pricing-card">
                         <div class="plan-header">
                             <div class="plan-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
+                                <div class="f-icon">
+                                    <div class="line line-1"></div>
+                                    <div class="line line-2"></div>
+                                    <div class="line line-3"></div>
+                                </div>
                             </div>
                             <h3>Free</h3>
                         </div>
@@ -299,10 +595,11 @@
                     <div class="pricing-card professional featured">
                         <div class="plan-header">
                             <div class="plan-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
+                                <div class="f-icon">
+                                    <div class="line line-1"></div>
+                                    <div class="line line-2"></div>
+                                    <div class="line line-3"></div>
+                                </div>
                             </div>
                             <h3>Pro</h3>
                             <span class="popular-badge">Popular</span>
@@ -332,10 +629,11 @@
                     <div class="pricing-card enterprise">
                         <div class="plan-header">
                             <div class="plan-icon">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                </svg>
+                                <div class="f-icon">
+                                    <div class="line line-1"></div>
+                                    <div class="line line-2"></div>
+                                    <div class="line line-3"></div>
+                                </div>
                             </div>
                             <h3>Business</h3>
                         </div>
@@ -438,18 +736,49 @@
     <!-- Dialog Overlay -->
     <div id="configuratorDialog" class="dialog-overlay">
         <div class="dialog-content">
-            <div class="dialog-header">
-                <h3 id="dialogTitle">Furniture Configurator</h3>
-                <button class="dialog-close">&times;</button>
-            </div>
             <div class="dialog-body">
+                <button class="dialog-close">&times;</button>
                 <iframe id="dialogIframe" src="" style="width:100%; background: transparent; border: none;"
-                    height="600px" alt="Furniture configurator">
+                    height="400px" alt="Furniture configurator">
                 </iframe>
+            </div>
+            <div class="dialog-footer">
+                <div class="product-info">
+                    <div class="product-category" id="productCategory">OFFICE</div>
+                    <h2 class="product-title" id="productTitle">Bookshelf Unit</h2>
+                    <p class="product-description" id="productDescription">Open bookshelf unit with adjustable shelves
+                        and modern aesthetic.</p>
+
+                    <div class="product-specs">
+                        <div class="spec-item">
+                            <div class="spec-label">DIMENSIONS</div>
+                            <div class="spec-value" id="productDimensions">200cm x 40cm x 220cm</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">MATERIAL</div>
+                            <div class="spec-value" id="productMaterial">Metal & Wood</div>
+                        </div>
+                        <div class="spec-item">
+                            <div class="spec-label">STYLE</div>
+                            <div class="spec-value" id="productStyle">Industrial</div>
+                        </div>
+                    </div>
+
+                    <div class="color-options">
+                        <div class="spec-label">COLOR OPTIONS</div>
+                        <div class="spec-value" id="productColors">5 Options</div>
+                    </div>
+
+                    <div class="product-actions">
+                        <button class="btn-customize">Customize Design</button>
+                        <button class="btn-favorites">Save to Favorites</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 
