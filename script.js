@@ -709,8 +709,8 @@ function initMaterialsCarousel() {
     const titleElement = document.getElementById('carousel-title');
     const progressBar = document.getElementById('progress-bar');
 
-    // Check if carousel elements exist
-    if (!circles.length || !titleElement || !progressBar) {
+    // Check if carousel elements exist (title is optional)
+    if (!circles.length || !progressBar) {
         return;
     }
 
@@ -772,12 +772,14 @@ function initMaterialsCarousel() {
             }
         });
 
-        // Update title with animation
-        titleElement.style.animation = 'none';
-        setTimeout(() => {
-            titleElement.textContent = titles[index];
-            titleElement.style.animation = 'fadeInUpCarousel 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards';
-        }, 10);
+        // Update title with animation (if title element exists)
+        if (titleElement) {
+            titleElement.style.animation = 'none';
+            setTimeout(() => {
+                titleElement.textContent = titles[index];
+                titleElement.style.animation = 'fadeInUpCarousel 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards';
+            }, 10);
+        }
 
         // Reset progress bar
         progressBar.style.animation = 'none';
