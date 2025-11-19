@@ -1345,7 +1345,7 @@ body {
 /* Old features-section h4 styles removed */
 
 .features-list {
-    list-style: none;
+    list-style: inside;
     padding: 0;
     margin: 0;
 }
