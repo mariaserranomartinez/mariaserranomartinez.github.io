@@ -10,6 +10,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="/assets/fav.ico">
+    <script src="translations.js"></script>
 </head>
 
 <body>
@@ -30,14 +31,40 @@
             </div>
             <div class="nav-menu">
                 <!-- <a href="#home" class="nav-link">Product</a> -->
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#explore" class="nav-link">Explore</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#features" class="nav-link" data-translate="nav_features">Features</a>
+                <a href="#explore" class="nav-link" data-translate="nav_explore">Explore</a>
+                <a href="#pricing" class="nav-link" data-translate="nav_pricing">Pricing</a>
+                <a href="#contact" class="nav-link" data-translate="nav_contact">Contact</a>
             </div>
             <div class="nav-buttons">
-                <a href="#" class="nav-button login-btn">Log In</a>
-                <a href="#" class="nav-button signup-btn">Sign Up</a>
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <img src="assets/flags/en.png" alt="Language" class="selected-flag">
+                    <span class="selected-code">EN</span>
+                    <svg class="dropdown-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                        <path d="M1 1L6 6L11 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                    <div class="language-dropdown">
+                        <div class="language-option" data-lang="en">
+                            <img src="assets/flags/en.png" alt="English">
+                            <span>EN</span>
+                        </div>
+                        <div class="language-option" data-lang="es">
+                            <img src="assets/flags/es.png" alt="Español">
+                            <span>ES</span>
+                        </div>
+                        <div class="language-option" data-lang="cat">
+                            <img src="assets/flags/cat.png" alt="Català">
+                            <span>CAT</span>
+                        </div>
+                        <div class="language-option" data-lang="fr">
+                            <img src="assets/flags/fr.png" alt="Français">
+                            <span>FR</span>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="nav-button login-btn" data-translate="nav_login">Log In</a>
+                <a href="#" class="nav-button signup-btn" data-translate="nav_signup">Sign Up</a>
             </div>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -53,12 +80,15 @@
         <section id="home" class="section home-section">
             <div class="container">
                 <div class="hero-content">
-                    <h1>Custom furniture powered by a<br><span class="italic-text">3D Experience</span></h1>
-                    <p>FABER powers a suite of design API's for the next-generation of furniture companies to build
-                        hundreds of <span class="highlight-text">custom design flows</span>.</p>
+                    <h1><span data-translate="hero_title_1">Custom furniture powered by a</span><br><span
+                            class="italic-text" data-translate="hero_title_2">3D Experience</span></h1>
+                    <p><span data-translate="hero_description">FABER powers a suite of design API's for the
+                            next-generation of furniture companies to build
+                            hundreds of</span> <span class="highlight-text"
+                            data-translate="hero_description_highlight">custom design flows</span>.</p>
                     <div class="cta-buttons">
-                        <button class="cta-button primary">START A DESIGN </button>
-                        <button class="cta-button secondary">CONTACT SALES</button>
+                        <button class="cta-button primary" data-translate="hero_cta_design">START A DESIGN </button>
+                        <button class="cta-button secondary" data-translate="hero_cta_sales">CONTACT SALES</button>
                     </div>
                     <div class="hero-video">
                         <video autoplay muted loop>
@@ -70,11 +100,11 @@
                 <div class="hero-discover">
 
                     <!-- <div class="features-title typewriter" id="typewriter-text">Where Craftsmanship meets Technology</div> -->
-                    
+
                     <!-- Scroll Indicator -->
                     <div class="scroll-indicator">
                         <span></span>
-                        <p>Discover the features</p>
+                        <p data-translate="hero_discover">Discover the features</p>
                     </div>
                 </div>
             </div>
@@ -87,10 +117,10 @@
             <div class="feature-subsection" id="3d-design">
                 <div class="container">
                     <!-- Content for 3D Design -->
-                    <div class="feature-subsection-title">
+                    <div class="feature-subsection-title" data-translate="feature_3d_title">
                         Design in 3D
                     </div>
-                    <div class="feature-subsection-description">
+                    <div class="feature-subsection-description" data-translate="feature_3d_description">
                         Bring your furniture ideas to life with our intuitive 3D design tools. Customize every detail,
                         visualize in real-time, and create stunning pieces that reflect your unique style.
                     </div>
@@ -120,8 +150,8 @@
                                 <div class="morphing-cube-container" id="morphingCube1"></div>
                             </div>
                             <div class="designer-card-content">
-                                <div class="designer-card-category">Visualize and edit in real time</div>
-                                <h3 class="designer-card-title">Create and explore your furniture models directly in 3D.
+                                <div class="designer-card-category" data-translate="feature_3d_card1_category">Visualize and edit in real time</div>
+                                <h3 class="designer-card-title" data-translate="feature_3d_card1_title">Create and explore your furniture models directly in 3D.
                                     Every change in size, proportion, or material updates instantly — no rendering
                                     delays, no extra tools.</h3>
                             </div>
@@ -197,9 +227,9 @@
                                 </div>
                             </div>
                             <div class="designer-card-content">
-                                <div class="designer-card-category">Turn dimensions into parameters
+                                <div class="designer-card-category" data-translate="feature_3d_card2_category">Turn dimensions into parameters
                                 </div>
-                                <h3 class="designer-card-title">Define custom variables like width, height, thickness,
+                                <h3 class="designer-card-title" data-translate="feature_3d_card2_title">Define custom variables like width, height, thickness,
                                     or spacing — with minimums, maximums, and default values. Your customers interact
                                     safely within your design limits.</h3>
                             </div>
@@ -207,15 +237,15 @@
 
                         <div class="designer-card">
                             <div class="designer-card-image formula-card">
-                                <img src="assets/formula.png"/>
+                                <img src="assets/formula.png" />
                                 <!-- <div class="formula-diagram-container" id="formulaDiagram">
                                     <canvas id="formulaCanvas"></canvas>
                                 </div> -->
                             </div>
                             <div class="designer-card-content">
-                                <div class="designer-card-category">Automate relationships with formulas
+                                <div class="designer-card-category" data-translate="feature_3d_card3_category">Automate relationships with formulas
                                 </div>
-                                <h3 class="designer-card-title">Connect parameters together with simple formulas. For
+                                <h3 class="designer-card-title" data-translate="feature_3d_card3_title">Connect parameters together with simple formulas. For
                                     example: "shelf spacing = height / 5". Create intelligent designs that scale and
                                     adjust automatically.</h3>
                             </div>
@@ -228,10 +258,10 @@
             <!-- Materials Sub-section -->
             <div class="feature-subsection" id="materials">
                 <div class="container ">
-                    <div class="feature-subsection-title">
+                    <div class="feature-subsection-title" data-translate="feature_materials_title">
                         Materials Come To Life
                     </div>
-                    <div class="feature-subsection-description">
+                    <div class="feature-subsection-description" data-translate="feature_materials_description">
                         The materials that you define, ready to impress in 3D. Let your customers see and feel the
                         quality of your designs with realistic textures and finishes.
                     </div>
@@ -298,10 +328,10 @@
                 <div class="container row">
                     <div class="column">
 
-                        <div class="feature-subsection-title">
+                        <div class="feature-subsection-title" data-translate="feature_configurator_title">
                             Interactive Configuration
                         </div>
-                        <div class="feature-subsection-description">
+                        <div class="feature-subsection-description" data-translate="feature_configurator_description">
                             Experience our powerful configurator in action. Watch how dimensions, materials, and pricing
                             update in real-time as you customize your furniture.
                         </div>
@@ -316,7 +346,7 @@
 
                             <div class="slider-group">
                                 <div class="slider-header">
-                                    <div class="slider-label">WIDTH</div>
+                                    <div class="slider-label" data-translate="configurator_width">WIDTH</div>
                                     <div class="slider-value" id="widthValue">80 cm</div>
                                 </div>
                                 <div class="slider-container">
@@ -327,7 +357,7 @@
 
                             <div class="slider-group">
                                 <div class="slider-header">
-                                    <div class="slider-label">HEIGHT</div>
+                                    <div class="slider-label" data-translate="configurator_height">HEIGHT</div>
                                     <div class="slider-value" id="heightValue">150 cm</div>
                                 </div>
                                 <div class="slider-container">
@@ -338,7 +368,7 @@
 
                             <div class="slider-group">
                                 <div class="slider-header">
-                                    <div class="slider-label">CUPBOARDS</div>
+                                    <div class="slider-label" data-translate="configurator_cupboards">CUPBOARDS</div>
                                     <div class="slider-value" id="unitsValue">1 unit</div>
                                 </div>
                                 <div class="slider-container">
@@ -349,23 +379,23 @@
 
                             <div class="material-section">
                                 <div class="material-label">
-                                    <span>MATERIAL</span>
+                                    <span data-translate="configurator_material">MATERIAL</span>
                                     <span id="materialValue">Oak</span>
                                 </div>
                                 <div class="materials">
                                     <div class="material-option active" data-material="oak" data-multiplier="1.2">
                                         <div class="material-swatch oak"></div>
-                                        <div class="material-name">Oak</div>
+                                        <div class="material-name" data-translate="material_oak">Oak</div>
                                         <!-- <div class="material-price">+20%</div> -->
                                     </div>
                                     <div class="material-option" data-material="walnut" data-multiplier="1.5">
                                         <div class="material-swatch walnut"></div>
-                                        <div class="material-name">Walnut</div>
+                                        <div class="material-name" data-translate="material_walnut">Walnut</div>
                                         <!-- <div class="material-price">+50%</div> -->
                                     </div>
                                     <div class="material-option" data-material="pine" data-multiplier="1.0">
                                         <div class="material-swatch pine"></div>
-                                        <div class="material-name">Pine</div>
+                                        <div class="material-name" data-translate="material_pine">Pine</div>
                                         <!-- <div class="material-price">Base</div> -->
                                     </div>
                                 </div>
@@ -387,7 +417,7 @@
                             </div> -->
 
                             <div class="total-price">
-                                <div class="total-label">TOTAL PRICE</div>
+                                <div class="total-label" data-translate="configurator_total">TOTAL PRICE</div>
                                 <div class="total-amount" id="totalPrice">€ 288</div>
                             </div>
 
@@ -402,10 +432,10 @@
 
                 <div class="container">
                     <!-- Content for Client Configure -->
-                    <div class="feature-subsection-title">
+                    <div class="feature-subsection-title" data-translate="feature_client_title">
                         Show To Your Clientes
                     </div>
-                    <div class="feature-subsection-description">
+                    <div class="feature-subsection-description" data-translate="feature_client_description">
                         Either show it in your shop or add it to your web. Faber3D adapts to any way of working.
                     </div>
 
@@ -415,11 +445,13 @@
                     </div>
 
                     <!-- Platform Integration Logos -->
-                    <div class="platform-integration-text">Include it in your e-commerce website</div>
+                    <div class="platform-integration-text" data-translate="feature_client_integration">Include it in
+                        your e-commerce website</div>
                     <div class="platform-logos">
                         <img src="assets/squarespace-logo.svg" alt="Squarespace" class="platform-logo">
                         <img src="assets/wordpress.png" alt="WordPress" class="platform-logo">
-                        <img src="assets/shopify.png" alt="Shopify" class="platform-logo" style="height: 60px; margin-bottom: 5px;">
+                        <img src="assets/shopify.png" alt="Shopify" class="platform-logo"
+                            style="height: 60px; margin-bottom: 5px;">
                     </div>
 
                 </div>
@@ -431,10 +463,10 @@
         <!-- How To Section -->
         <section id="howto" class="section howto-section">
             <div class="container">
-                <div class="demo-title">
+                <div class="demo-title" data-translate="howto_title">
                     Experience the Magic
                 </div>
-                <div class="demo-subtitle">
+                <div class="demo-subtitle" data-translate="howto_subtitle">
                     Explore some ready-made examples below to see how Faber 3D can transform your furniture design
                     process.
                 </div>
@@ -466,10 +498,10 @@
 
         <section id="explore" class="section explore-section">
             <div class="container">
-                <div class="explore-title">
+                <div class="explore-title" data-translate="explore_title">
                     Explore More Designs
                 </div>
-                <div class="explore-subtitle">
+                <div class="explore-subtitle" data-translate="explore_subtitle">
                     Dive into our gallery of custom furniture designs created using Faber 3D. Get inspired and see the
                     possibilities.
                 </div>
@@ -486,21 +518,21 @@
                 </div>
             </div>
 
-            <div class="explore-cta-title">
+            <div class="explore-cta-title" data-translate="explore_cta_title">
                 Ready to create your own custom furniture?
             </div>
             <!-- <div class="explore-cta-subtitle">
             Start designing your dream furniture with our intuitive 3D configurator. No experience needed.
             </div> -->
-            <a href="#" class="explore-button">Get Started</a>
+            <a href="#" class="explore-button" data-translate="explore_button">Get Started</a>
 
         </section>
 
         <!-- Pricing Section -->
         <section id="pricing" class="section pricing-section">
             <div class="container">
-                <h2>Pricing Plans</h2>
-                <p>Choose the perfect plan for your needs.</p>
+                <h2 data-translate="pricing_title">Pricing Plans</h2>
+                <p data-translate="pricing_subtitle">Choose the perfect plan for your needs.</p>
 
                 <div class="pricing-grid">
                     <!-- No Registration -->
@@ -513,24 +545,24 @@
                                     <div class="line line-3"></div>
                                 </div>
                             </div>
-                            <h3>No registration</h3>
+                            <h3 data-translate="pricing_no_reg">No registration</h3>
                         </div>
 
                         <div class="price">
                             <span class="currency">€</span><span class="amount">0</span>
                         </div>
-                        <div class="billing-info">No registration required</div>
+                        <div class="billing-info" data-translate="pricing_no_reg_required">No registration required</div>
 
-                        <button class="pricing-button starter-btn">Create Collection</button>
+                        <button class="pricing-button starter-btn" data-translate="pricing_create_collection">Create Collection</button>
 
                         <div class="pricing-features-section">
                             <ul class="features-list">
-                                <li>✓ Create and edit collections</li>
-                                <li>✓ Export and Import</li>
-                                <li>✓ Save to file</li>
-                                <li>✓ Local use</li>
-                                <li>✓ 1 Collection</li>
-                                <li>✓ 1 piece of furniture</li>
+                                <li data-translate="pricing_feature_create">✓ Create and edit collections</li>
+                                <li data-translate="pricing_feature_export">✓ Export and Import</li>
+                                <li data-translate="pricing_feature_save_file">✓ Save to file</li>
+                                <li data-translate="pricing_feature_local">✓ Local use</li>
+                                <li data-translate="pricing_collection_1">✓ 1 Collection</li>
+                                <li data-translate="pricing_furniture_1">✓ 1 piece of furniture</li>
                             </ul>
                         </div>
                     </div>
@@ -641,20 +673,21 @@
         <!-- Contact Section -->
         <section id="contact" class="section contact-section">
             <div class="container">
-                <h2>Contact Us</h2>
-                <p>Get in touch with us for your next project.</p>
+                <h2 data-translate="contact_title">Contact Us</h2>
+                <p data-translate="contact_subtitle">Get in touch with us for your next project.</p>
                 <div class="contact-form">
                     <form>
                         <div class="form-group">
-                            <input type="text" placeholder="Your Name" required>
+                            <input type="text" data-translate="contact_name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Your Email" required>
+                            <input type="email" data-translate="contact_email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                            <textarea data-translate="contact_message" placeholder="Your Message" rows="5"
+                                required></textarea>
                         </div>
-                        <button type="submit" class="submit-button">Send Message</button>
+                        <button type="submit" class="submit-button" data-translate="contact_send">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -667,7 +700,7 @@
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-                <div class="features-title typewriter" id="typewriter-text">Where Craftsmanship meets Technology</div>
+                <div class="features-title typewriter" id="typewriter-text" data-translate="semi_features_title">Where Craftsmanship meets Technology</div>
 
                 <!-- Scroll Indicator -->
                 <!-- <div class="scroll-indicator">
@@ -687,20 +720,20 @@
                 <div class="footer-right">
                     <div class="footer-columns">
                         <div class="footer-column">
-                            <h4>GET IN TOUCH</h4>
+                            <h4 data-translate="footer_get_in_touch">GET IN TOUCH</h4>
                             <ul>
-                                <li><a href="#">Media</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="#" data-translate="footer_media">Media</a></li>
+                                <li><a href="#" data-translate="footer_careers">Careers</a></li>
+                                <li><a href="#" data-translate="footer_contact">Contact</a></li>
                             </ul>
                         </div>
                         <div class="footer-column">
-                            <h4>COMPANY</h4>
+                            <h4 data-translate="footer_company">COMPANY</h4>
                             <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Uses</a></li>
-                                <li><a href="#">Stewardship</a></li>
-                                <li><a href="#">Technology</a></li>
+                                <li><a href="#" data-translate="footer_about">About</a></li>
+                                <li><a href="#" data-translate="footer_uses">Uses</a></li>
+                                <li><a href="#" data-translate="footer_stewardship">Stewardship</a></li>
+                                <li><a href="#" data-translate="footer_technology">Technology</a></li>
                             </ul>
                         </div>
                     </div>
@@ -709,7 +742,7 @@
             <div class="footer-bottom-section">
                 <div class="footer-divider"></div>
                 <div class="footer-bottom">
-                    <p>&copy; 2025 Faber 3D, Rhode Avenue 255</p>
+                    <p data-translate="footer_copyright">&copy; 2025 Faber 3D, Rhode Avenue 255</p>
                 </div>
             </div>
             <div class="footer-brand">

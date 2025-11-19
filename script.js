@@ -1,6 +1,11 @@
 // DOM Content Loaded Event
 document.addEventListener('DOMContentLoaded', function () {
 
+    // Initialize Language System
+    if (typeof initLanguageSystem === 'function') {
+        initLanguageSystem();
+    }
+
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
