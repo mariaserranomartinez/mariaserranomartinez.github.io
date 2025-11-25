@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const ctaButton = document.querySelector('.cta-button');
     if (ctaButton) {
         ctaButton.addEventListener('click', function () {
-            const contactSection = document.querySelector('#contact');
+            const contactSection = document.querySelector('#howto');
             if (contactSection) {
                 const headerOffset = 80;
                 const elementPosition = contactSection.offsetTop;
